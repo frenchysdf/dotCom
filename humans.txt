@@ -1,0 +1,24 @@
+/* 
+-..-. -..-. ... - . .--. .... .- -. . -.. ..- -... --- .. ... .-.-.- -.-. --- --
+ */
+
+/* TEAM */
+Name     :  Stéphane Dubois
+Website  :  http://stephanedubois.com
+Twitter  :  @frenchysdf
+Location :  Harleysville, PA, USA
+
+/* SITE */
+Standards : HTML5, CSS3, JavaScript
+Components: N/A
+Libs      : N/A
+APIs      : N/A
+Icons     : N/A
+Doctype   : HTML5
+Language  : (American) English
+Software  : Visual Studio Code, SASS, Git, Affinity Designer
+SSL       : Github
+
+/* 
+-..-. -..-. ... - . .--. .... .- -. . -.. ..- -... --- .. ... .-.-.- -.-. --- --
+ */
