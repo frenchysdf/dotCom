@@ -1,0 +1,51 @@
+//-----=> VARIABLES
+//-----=> MIXINS
+//-----=> ROOT
+//############################################
+//-----=> BODY
+//############################################
+body
+  text-align: center
+  font-family: 'Montserrat', sans-serif
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  height: 100vh
+
+  @media (prefers-color-scheme: dark) 
+   background: #4A4A4A
+   margin: 10px
+   color: #fff
+  
+//############################################
+//-----=> HEADER 
+//############################################  
+header
+  width: 100%
+  h1
+    font-family: 'Doppio One', sans-serif
+
+svg
+  fill: currentColor
+
+//############################################
+//-----=> MAIN
+//############################################
+
+main
+  padding: 40px
+  color: rgba(0,0,0,.6)
+  animation: 2s ease infinite pulse;
+  text-shadow: 2px 2px 2px #ccc
+
+@keyframes pulse 
+  0%
+    transform: scale(1)
+  
+  25%
+    transform: scale(1.1)
+    font-weight: bold
+  
+  50%
+    transform: scale(1)
