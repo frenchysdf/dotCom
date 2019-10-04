@@ -1,4 +1,5 @@
 //-----=> VARIABLES
+$text-color: rgba(0,0,0,.6)
 //-----=> MIXINS
 //-----=> ROOT
 //############################################
@@ -13,6 +14,8 @@ body
   justify-content: center
   flex-direction: column
   height: 100vh
+  margin: 0
+  border: 5px solid silver
 
   // @media (prefers-color-scheme: dark) 
   //  background: #4A4A4A
@@ -38,10 +41,18 @@ svg
 
 main
   padding: 40px
-  color: rgba(0,0,0,.6)
-  animation: 2s ease infinite pulse;
-  text-shadow: 2px 2px 2px #ccc
-
+  color: $text-color
+  // animation: 2s ease infinite pulse;
+  // text-shadow: 2px 2px 2px #ccc
+p 
+  text-align: left
+ul
+  list-style: none
+  li 
+    display: inline-block
+a:link 
+    color: $text-color
+ 
 //############################################
 //-----=> footer
 //############################################
