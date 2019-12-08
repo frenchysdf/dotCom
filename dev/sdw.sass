@@ -7,28 +7,31 @@ $icon-hover-color: rgba(0,0,0,.7)
 //############################################
 //-----=> BODY
 //############################################
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
 
 body
   text-align: center
   font-family: 'Montserrat', sans-serif
+  border: 5px solid silver
   display: flex
   align-items: center
   justify-content: center
   flex-direction: column
   height: 100vh
-  margin: 0
-  border: 5px solid silver
   background-image: url(site-bg.png)
   background-size: cover
+  @media screen and (max-height: 670px)
+    height: 100%
 
-  // @media (prefers-color-scheme: dark) 
-  //  background: #4A4A4A
-  //  margin: 10px
-
-   //back at it
+@media (prefers-color-scheme: dark) 
+  body
+    border-color: $black-color
   
 //############################################
-//-----=> HEADER  {dog101}
+//-----=> HEADER 
 //############################################  
 header
   width: 100%
@@ -36,10 +39,12 @@ header
   h1
     font-family: 'Doppio One', sans-serif
 
+  h2
+    @media screen and (max-width: 390px)
+      font-size: 98%
 svg
   fill: $black-color
   
-
 .icon
   width: 3.5rem
   height: 3.5rem
@@ -48,7 +53,7 @@ svg
   &:hover
     fill: $icon-hover-color
     transform: scale(1.5)
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     border-radius: 4px
 
 //############################################
@@ -56,19 +61,27 @@ svg
 //############################################
 
 main
-  padding: 2.5rem
   color: $text-color
+  width: 95%
+  margin-top: 1rem
   // animation: 2s ease infinite pulse;
-  // text-shadow: 2px 2px 2px #ccc
+  text-shadow: 2px 2px 2px #ccc
+  @media screen and (min-width: 800px)
+    margin: 2.5rem
+
 p 
   text-align: left
-  margin: auto 20vw
   line-height: 1.75
+  text-rendering: optimizeLegibility
+  @media screen and (min-width: 800px)
+    margin: auto 20vw
 ul
   padding-top: 2rem
   list-style: none
+  display: flex
+  justify-content: center
   li 
-    display: inline-block
+    // display: inline-block
     padding: 0 2rem
 a:link
   color: $text-color
@@ -76,8 +89,12 @@ a:link
 //############################################
 //-----=> footer
 //############################################
-footer
 
+//############################################
+//-----=> UTILITIES
+//############################################
+.m-1a
+  margin: 1rem auto
 //############################################
 //-----=> ANIMATION
 //############################################
