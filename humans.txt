@@ -10,14 +10,15 @@ Location :  Harleysville, PA, USA
 
 /* SITE */
 Standards : HTML5, CSS3, JavaScript
-Components: N/A
-Libs      : N/A
-APIs      : N/A
-Icons     : N/A
-Doctype   : HTML5
-Language  : (American) English
-Software  : Visual Studio Code, SASS, Git, Affinity Designer
-SSL       : Github
+Components:       N/A
+Libs      :       N/A
+APIs      :       N/A
+Icons     :       N/A
+Doctype   :       HTML5
+Language  :       (American) English
+Software  :       Visual Studio Code, SASS, Git, Affinity Designer
+SSL:              Github
+Background image: vector created by Harryarts - www.freepik.com (https://www.freepik.com/free-photos-vectors/backgroundBackground)
 
 /* 
 -..-. -..-. ... - . .--. .... .- -. . -.. ..- -... --- .. ... .-.-.- -.-. --- --

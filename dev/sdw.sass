@@ -1,5 +1,7 @@
 //-----=> VARIABLES
 $text-color: rgba(0,0,0,.6)
+$black-color: rgb(0,0,0)
+$icon-hover-color: rgba(0,0,0,.7)
 //-----=> MIXINS
 //-----=> ROOT
 //############################################
@@ -16,6 +18,8 @@ body
   height: 100vh
   margin: 0
   border: 5px solid silver
+  background-image: url(_assets/site-bg.png)
+  background-size: cover
 
   // @media (prefers-color-scheme: dark) 
   //  background: #4A4A4A
@@ -33,25 +37,40 @@ header
     font-family: 'Doppio One', sans-serif
 
 svg
-  fill: currentColor
+  fill: $black-color
+  padding: .25rem
+  transition: all .2s ease-in-out
+  &:hover
+    fill: $icon-hover-color
+    transform: scale(1.5)
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    border-radius: 4px
+
+.icon
+  width: 3.5rem
+  height: 3.5rem
 
 //############################################
 //-----=> MAIN
 //############################################
 
 main
-  padding: 40px
+  padding: 2.5rem
   color: $text-color
   // animation: 2s ease infinite pulse;
   // text-shadow: 2px 2px 2px #ccc
 p 
   text-align: left
+  margin: auto 20vw
+  line-height: 1.75
 ul
+  padding-top: 2rem
   list-style: none
   li 
     display: inline-block
-a:link 
-    color: $text-color
+    padding: 0 2rem
+a:link
+  color: $text-color
  
 //############################################
 //-----=> footer
@@ -61,13 +80,3 @@ footer
 //############################################
 //-----=> ANIMATION
 //############################################
-@keyframes pulse 
-  0%
-    transform: scale(1)
-  
-  25%
-    transform: scale(1.1)
-    font-weight: bold
-  
-  50%
-    transform: scale(1)
