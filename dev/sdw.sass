@@ -4,6 +4,9 @@ $black-color: rgb(0,0,0)
 $light-gray: rgba(0,0,0,0.1)
 $icon-hover-color: rgba(0,0,0,.7)
 //-----=> MIXINS
+@mixin box-media-query
+   @media screen and (min-width: 800px)
+    margin: 3rem 20vw auto 20vw
 //-----=> ROOT
 //############################################
 //-----=> BODY
@@ -22,9 +25,11 @@ body
   justify-content: center
   flex-direction: column
   height: 100vh
-  background-image: url(site-bg.png)
+  background: #ECE9E6
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
+  background: url('vectorstock_23855385.png'), linear-gradient(to right, #FFFFFF, #ECE9E6)
   background-size: cover
-  @media screen and (max-height: 1024px)
+  @media screen and (max-height: 1115px)
     height: auto
 
 @media (prefers-color-scheme: dark) 
@@ -71,8 +76,7 @@ p
   text-align: left
   line-height: 1.75
   text-rendering: optimizeLegibility
-  @media screen and (min-width: 800px)
-    margin: auto 20vw
+  @include box-media-query
 ul
   padding-top: 2rem
   list-style: none
@@ -86,11 +90,12 @@ a:link
   color: $text-color
 
 section
-  background: white
+  background: rgba(255,255,255,.8)
   border: 1px solid $light-gray
   border-radius: 4px
   padding: 2rem
   margin: 3rem auto
+  @include box-media-query
 h3
   &::before
     content: '- '
@@ -102,6 +107,7 @@ img
 
 hr
   margin: 3rem auto
+  color: $light-gray
   @media screen and (min-width: 800px)
     width: 50%
 //############################################
