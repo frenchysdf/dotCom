@@ -1,8 +1,10 @@
 ::-moz-selection {
-  background-color: #fb5300; }
+  background-color: #fb5300;
+  color: white; }
 
 ::selection {
-  background-color: #fb5300; }
+  background-color: #fb5300;
+  color: white; }
 
 *, *::before, *::after {
   margin: 0;
@@ -65,7 +67,7 @@ main {
   color: rgba(0, 0, 0, 0.6);
   width: 95%;
   margin-top: 1rem;
-  text-shadow: 2px 2px 2px #ccc; }
+  text-shadow: 2px 2px 2px #cccccc; }
   @media screen and (min-width: 800px) {
     main {
       margin: 2.5rem; } }
