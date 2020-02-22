@@ -3,12 +3,17 @@ $text-color: rgba(0,0,0,.6)
 $black-color: rgb(0,0,0)
 $light-gray: rgba(0,0,0,0.1)
 $icon-hover-color: rgba(0,0,0,.7)
+$selection-color: rgba(251, 83, 0, 1)
+$headers-font: 'Doppio One', sans-serif
+$copy-font: 'Montserrat', sans-serif
 //-----=> MIXINS
 @mixin box-media-query
    @media screen and (min-width: 800px)
     margin: 3rem 20vw auto 20vw
 //-----=> ROOT
 //############################################
+::selection
+  background-color: $selection-color
 //-----=> BODY
 //############################################
 *, *::before, *::after
@@ -18,7 +23,7 @@ $icon-hover-color: rgba(0,0,0,.7)
 
 body
   text-align: center
-  font-family: 'Montserrat', sans-serif
+  font-family: $copy-font
   border: 5px solid silver
   display: flex
   align-items: center
@@ -29,12 +34,14 @@ body
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
   background: url('site-background.png'), linear-gradient(to right, #FFFFFF, #ECE9E6)
   background-size: cover
+
   @media screen and (max-height: 1115px)
     height: auto
 
-@media (prefers-color-scheme: dark) 
-  body
+  @media (prefers-color-scheme: dark) 
     border-color: $black-color
+
+
   
 //############################################
 //-----=> HEADER 
@@ -43,7 +50,7 @@ header
   width: 100%
 
   h1
-    font-family: 'Doppio One', sans-serif
+    font-family: $headers-font
 
   h2
     @media screen and (max-width: 390px)
