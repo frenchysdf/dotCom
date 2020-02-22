@@ -1,9 +1,13 @@
 //-----=> VARIABLES
 $text-color: rgba(0,0,0,.6)
 $black-color: rgb(0,0,0)
+$dark-gray-color: rgba(115, 114, 114, 1)
 $light-gray: rgba(0,0,0,0.1)
+$gray-color: rgba(204, 204, 204, 1)
+$white-color: rgba(255, 255, 255, 1)
 $icon-hover-color: rgba(0,0,0,.7)
 $selection-color: rgba(251, 83, 0, 1)
+$selection-shadow-color: $dark-gray
 $headers-font: 'Doppio One', sans-serif
 $copy-font: 'Montserrat', sans-serif
 //-----=> MIXINS
@@ -14,6 +18,8 @@ $copy-font: 'Montserrat', sans-serif
 //############################################
 ::selection
   background-color: $selection-color
+  color: $white-color
+  text-shadow: 2px 2px 2px $dark-gray-color
 //-----=> BODY
 //############################################
 *, *::before, *::after
@@ -24,7 +30,7 @@ $copy-font: 'Montserrat', sans-serif
 body
   text-align: center
   font-family: $copy-font
-  border: 5px solid silver
+  border: 5px solid $dark-gray-color
   display: flex
   align-items: center
   justify-content: center
@@ -75,7 +81,7 @@ main
   color: $text-color
   width: 95%
   margin-top: 1rem
-  text-shadow: 2px 2px 2px #ccc
+  text-shadow: 2px 2px 2px $gray-color
   @media screen and (min-width: 800px)
     margin: 2.5rem
 
