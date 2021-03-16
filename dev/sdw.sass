@@ -7,7 +7,7 @@ $gray-color: rgba(204, 204, 204, 1)
 $white-color: rgba(255, 255, 255, 1)
 $icon-hover-color: rgba(0,0,0,.7)
 $selection-color: rgba(251, 83, 0, 1)
-$selection-shadow-color: $dark-gray
+$selection-shadow-color: $dark-gray-color
 $headers-font: 'Doppio One', sans-serif
 $copy-font: 'Montserrat', sans-serif
 //-----=> MIXINS
@@ -95,6 +95,7 @@ ul
   list-style: none
   display: flex
   justify-content: center
+  align-items: center
   flex-wrap: wrap
   li 
     padding: 0 2rem
@@ -117,7 +118,10 @@ h3
 img
   filter: grayscale(1)
   max-width: 100%
-
+.beerd-logo
+  opacity: .6 
+.cti
+  opacity: .7 
 hr
   margin: 3rem auto
   color: $light-gray
