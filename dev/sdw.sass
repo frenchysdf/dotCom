@@ -1,5 +1,5 @@
 //-----=> VARIABLES
-$text-color: rgba(0,0,0,.6)
+$text-color: hsl(0, 0%, 0%) //rgba(0,0,0,.6)
 $black-color: rgb(0,0,0)
 $dark-gray-color: rgba(115, 114, 114, 1)
 $light-gray: rgba(0,0,0,0.1)
@@ -27,22 +27,26 @@ $copy-font: 'Montserrat', sans-serif
   padding: 0
   box-sizing: border-box
 
+
 body
   text-align: center
   font-family: $copy-font
+  ////I
   border: 5px solid $dark-gray-color
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
+  // display: flex
+  // align-items: center
+  // justify-content: center
+  // flex-direction: column
   height: 100vh
   background: #ECE9E6
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
   background: url('site-background.png'), linear-gradient(to right, #FFFFFF, #ECE9E6)
   background-size: cover
+  background-repeat: no-repeat
+ 
 
-  @media screen and (max-height: 1115px)
-    height: auto
+  // @media screen and (max-height: 1115px)
+  //   height: auto
 
   @media (prefers-color-scheme: dark) 
     border-color: $black-color
@@ -80,15 +84,16 @@ svg
 main
   color: $text-color
   width: 95%
-  margin-top: 1rem
-  text-shadow: 2px 2px 2px $gray-color
-  @media screen and (min-width: 800px)
-    margin: 2.5rem
+  margin: 1rem auto
+  //text-shadow: 2px 2px 2px $gray-color
+  // @media screen and (min-width: 800px)
+  //   margin: 2.5rem
 
 p 
   text-align: left
   line-height: 1.75
   text-rendering: optimizeLegibility
+  font-size: 1.25rem
   @include box-media-query
 ul
   padding-top: 2rem
@@ -109,7 +114,9 @@ section
   border-radius: 4px
   padding: 2rem
   margin: 3rem auto
+  
   @include box-media-query
+
 h3
   &::before
     content: '- '
