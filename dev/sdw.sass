@@ -1,15 +1,15 @@
 //-----=> VARIABLES
-$text-color: hsl(0, 0%, 0%) //rgba(0,0,0,.6)
-$black-color: rgb(0,0,0)
-$dark-gray-color: rgba(115, 114, 114, 1)
-$light-gray: rgba(0,0,0,0.1)
-$gray-color: rgba(204, 204, 204, 1)
-$white-color: rgba(255, 255, 255, 1)
-$icon-hover-color: rgba(0,0,0,.7)
-$selection-color: rgba(251, 83, 0, 1)
-$selection-shadow-color: $dark-gray-color
-$headers-font: 'Doppio One', sans-serif
-$copy-font: 'Montserrat', sans-serif
+$text-color:              hsl(0, 0%, 0%) //rgba(0,0,0,.6)
+$black-color:             rgb(0,0,0)
+$dark-gray-color:         rgba(115, 114, 114, 1)
+$light-gray:              rgba(0,0,0,0.1)
+$gray-color:              rgba(204, 204, 204, 1)
+$white-color:             rgba(255, 255, 255, 1)
+$icon-hover-color:        rgba(0,0,0,.7)
+$selection-color:         rgb(180,0,44)
+$selection-shadow-color:  $dark-gray-color
+$headers-font:            'Doppio One', sans-serif
+$copy-font:               'Montserrat', sans-serif
 //-----=> MIXINS
 @mixin box-media-query
    @media screen and (min-width: 800px)
@@ -54,6 +54,7 @@ body
 //############################################  
 header
   width: 100%
+  margin-block: 5rem
 
   h1
     font-family: $headers-font
@@ -106,7 +107,7 @@ a:link
   color: $text-color
 
 section
-  background: rgba(255,255,255,.8)
+  background: rgba(255,255,255,.7)
   border: 1px solid $light-gray
   border-radius: 4px
   padding: 2rem
@@ -116,6 +117,7 @@ section
   
 .references
   box-shadow: 0 2px 6px rgb(0 0 0 / 30%)
+  margin-block: 5rem
   
   img
     transition: all .5s
