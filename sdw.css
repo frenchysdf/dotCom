@@ -1,7 +1,7 @@
 ::selection {
-  background-color: #fb5300;
-  color: white;
-  text-shadow: 2px 2px 2px #737272;
+  background-color: rgb(251, 83, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgb(115, 114, 114);
 }
 
 *, *::before, *::after {
@@ -13,7 +13,7 @@
 body {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  border: 5px solid #737272;
+  border: 5px solid rgb(115, 114, 114);
   background: #ECE9E6;
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
   background: url("site-background.png"), linear-gradient(to right, #FFFFFF, #ECE9E6);
@@ -22,7 +22,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    border-color: black;
+    border-color: rgb(0, 0, 0);
   }
 }
 
@@ -39,7 +39,7 @@ header h1 {
 }
 
 svg {
-  fill: black;
+  fill: rgb(0, 0, 0);
 }
 
 .icon {
@@ -54,7 +54,7 @@ svg {
 }
 
 main {
-  color: black;
+  color: hsl(0deg, 0%, 0%);
   width: 95%;
   margin: 1rem auto;
 }
@@ -84,7 +84,7 @@ ul li {
 }
 
 a:link {
-  color: black;
+  color: hsl(0deg, 0%, 0%);
 }
 
 section {
