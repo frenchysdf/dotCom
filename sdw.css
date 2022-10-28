@@ -108,6 +108,13 @@ section {
 .references {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+.references img {
+  transition: all 0.5s;
+}
+.references img:hover {
+  filter: unset;
+  transform: scale(1.1);
+}
 
 h3::before {
   content: "- ";
