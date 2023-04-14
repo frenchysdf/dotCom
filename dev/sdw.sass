@@ -1,96 +1,116 @@
+//############################################
 //-----=> VARIABLES
-$text-color:              hsl(0, 0%, 0%) //rgba(0,0,0,.6)
-$black-color:             rgb(0,0,0)
+//############################################
+
+//COLOR PALETTE
+  //BLACK   => #030303 | rgb(3, 3, 3)       | hsl(0, 0%, 1%)
+  //RED     => #941305 | rgb(148, 19, 5)    | hsl(6, 93%, 30%)
+  //ORANGE  => #cc2c11 | rgb(204, 44, 17)   | hsl(9, 85%, 43%)
+  //GREY    => #747d90 | rgb(116, 125, 144) | hsl(221, 11%, 51%)
+  //BLUE    => #145b9c | rgb(20, 91, 156)   | hsl(209, 77%, 35%)
+
+//=> COLORS
+
+$color-black:             hsl(0, 0%, 1%)
+$color-red:               hsl(6, 93%, 30%)
+$color-orange:            hsl(9, 85%, 43%)
+$color-gray:              hsl(221, 11%, 51%)
+$color-blue:              hsl(209, 77%, 35%)
+$color-white:             hsl(0, 0%, 100%)
+
+//=> COLORS MODIFIERS
+
 $dark-gray-color:         rgba(115, 114, 114, 1)
 $light-gray:              rgba(0,0,0,0.1)
 $gray-color:              rgba(204, 204, 204, 1)
-$white-color:             rgba(255, 255, 255, 1)
+
+//=> ELEMENTS STATES COLORS
+
 $icon-hover-color:        rgba(0,0,0,.7)
-$selection-color:         rgb(180,0,44)
+$selection-color:         rgb(116, 125, 144)
 $selection-shadow-color:  $dark-gray-color
-$headers-font:            'Doppio One', sans-serif
-$copy-font:               'Montserrat', sans-serif
-//-----=> MIXINS
+
+//=> UI ENHANCEMENTS
+
+$box-shadow:              rgb(116, 125, 144)
+
+//=> FONTS
+
+$font-header:            'Doppio One', sans-serif
+$font-copy:              'Montserrat', sans-serif
+
+//=> MIXINS
+
 @mixin box-media-query
    @media screen and (min-width: 800px)
-    margin: 3rem 20vw auto 20vw
-//-----=> ROOT
+    margin:           3rem 20vw auto 20vw
+    
+//############################################    
+//-----=> RULES
 //############################################
+
+//-----=> DEFAULTS
+
 ::selection
-  background-color: $selection-color
-  color: $white-color
-  text-shadow: 2px 2px 2px $dark-gray-color
-//-----=> BODY
-//############################################
+  background-color:   $selection-color
+  color:              $color-white
+  text-shadow:        2px 2px 2px $dark-gray-color
+  
 *, *::before, *::after
-  margin: 0
-  padding: 0
-  box-sizing: border-box
+  margin:             0
+  padding:            0
+  box-sizing:         border-box
 
 html
-  height: 100%
+  height:             100%
+  
 body
-  text-align: center
-  font-family: $copy-font
-  border: 5px solid $dark-gray-color
-  background: #ECE9E6
-  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
-  background: url('site-background.png'), linear-gradient(to right, #FFFFFF, #ECE9E6)
-  background-size: cover
-  background-repeat: no-repeat
-  height: 100%
- 
-
-  // @media screen and (max-height: 1115px)
-  //   height: auto
+  text-align:         center
+  font-family:        $font-copy
+  border:             5px solid $dark-gray-color
+  background:         #ECE9E6
+  background:         -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
+  background:         url('site-background.png'), linear-gradient(to right, #FFFFFF, #ECE9E6)
+  background-size:    cover
+  background-repeat:  no-repeat
+  height:             100% 
 
   @media (prefers-color-scheme: dark) 
-    border-color: $black-color
-
-
+    border-color:     $black-color
   
-//############################################
-//-----=> HEADER 
-//############################################  
+//-----=> HTML ELEMENTS
+ 
 header
   width: 100%
   margin-top: 5rem
 
-  h1
-    font-family: $headers-font
+h1
+  font-family: $font-header
 
-  h2
-    @media screen and (max-width: 390px)
-      font-size: 98%
+h2
+  @media screen and (max-width: 390px)
+    font-size: 98%
+  
+h3
+  &::before
+    content: '- '
+  &::after
+    content: ' -'
+
 svg
   fill: $black-color
   
-.icon
-  width: 3.5rem
-  height: 3.5rem
-  padding: .25rem
-  transition: all .3s ease-in-out
-  &:hover
-    fill: $icon-hover-color
-    transform: scale(1.5)
-
-//############################################
-//-----=> MAIN
-//############################################
-
 main
   color: $text-color
   width: 95%
   margin: 1rem auto
-  //text-shadow: 2px 2px 2px $gray-color
-  // @media screen and (min-width: 800px)
-  //   margin: 2.5rem
 
 p 
   text-align: left
   line-height: 1.75
   text-rendering: optimizeLegibility
   font-size: 1.25rem
+  
   @include box-media-query
   
 ul
@@ -100,8 +120,9 @@ ul
   justify-content: center
   align-items: center
   flex-wrap: wrap
-  li 
-    padding: 0 2rem
+  
+li 
+  padding: 0 2rem
 
 a:link
   color: $text-color
@@ -114,43 +135,50 @@ section
   margin: 3rem auto
   
   @include box-media-query
+
+img
+  filter: grayscale(1)
+  max-width: 100%
   
+hr
+  margin: 3rem auto
+  color: $light-gray
+  
+  @media screen and (min-width: 800px)
+    width: 50%
+    
+//-----=> CLASSES
+
 .references
-  box-shadow: 0 2px 6px rgb(0 0 0 / 30%)
+  box-shadow: 0 2px 6px $box-shadow
   margin-block: 5rem
   
   img
     transition: all .5s
+    
     &:hover
       filter: unset
       transform: scale(1.1)
 
-h3
-  &::before
-    content: '- '
-  &::after
-    content: ' -'
-img
-  filter: grayscale(1)
-  max-width: 100%
+.icon
+  width: 3.5rem
+  height: 3.5rem
+  padding: .25rem
+  transition: all .3s ease-in-out
+  
+  &:hover
+    fill:       $icon-hover-color
+    transform:  scale(1.5)
+
 .beerd-logo
-  opacity: .6 
+  opacity: .6
+   
 .cti
   opacity: .7 
-hr
-  margin: 3rem auto
-  color: $light-gray
-  @media screen and (min-width: 800px)
-    width: 50%
-//############################################
-//-----=> footer
-//############################################
 
-//############################################
 //-----=> UTILITIES
-//############################################
+
 .m-1a
   margin: 1rem auto
-//############################################
+  
 //-----=> ANIMATION
-//############################################
