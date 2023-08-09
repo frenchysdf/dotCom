@@ -1,6 +1,6 @@
 ::selection {
-  background-color: rgb(180, 0, 44);
-  color: rgb(255, 255, 255);
+  background-color: rgb(116, 125, 144);
+  color: hsl(0, 0%, 100%);
   text-shadow: 2px 2px 2px rgb(115, 114, 114);
 }
 
@@ -10,57 +10,78 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
+html::before, html::after {
+  content: "";
+  position: fixed;
+  background: rgb(115, 114, 114);
+}
+html::before, html::after {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+html::before {
+  top: 0;
+}
+html::after {
+  bottom: 0;
 }
 
 body {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  border: 5px solid rgb(115, 114, 114);
   background: #ECE9E6;
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
   background: url("site-background.png"), linear-gradient(to right, #FFFFFF, #ECE9E6);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  min-height: 100vh;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    border-color: rgb(0, 0, 0);
-  }
+body::before, body::after {
+  content: "";
+  position: fixed;
+  background: rgb(115, 114, 114);
+}
+body::before, body::after {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
+body::before {
+  left: 0;
+}
+body::after {
+  right: 0;
 }
 
 header {
   width: 100%;
   margin-top: 5rem;
 }
-header h1 {
+
+h1 {
   font-family: "Doppio One", sans-serif;
 }
+
 @media screen and (max-width: 390px) {
-  header h2 {
+  h2 {
     font-size: 98%;
   }
 }
 
-svg {
-  fill: rgb(0, 0, 0);
+h3::before {
+  content: "- ";
+}
+h3::after {
+  content: " -";
 }
 
-.icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  padding: 0.25rem;
-  transition: all 0.3s ease-in-out;
-}
-.icon:hover {
-  fill: rgba(0, 0, 0, 0.7);
-  transform: scale(1.5);
+svg {
+  fill: hsl(0, 0%, 1%);
 }
 
 main {
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 1%);
   width: 95%;
   margin: 1rem auto;
 }
@@ -85,12 +106,13 @@ ul {
   align-items: center;
   flex-wrap: wrap;
 }
-ul li {
+
+li {
   padding: 0 2rem;
 }
 
 a:link {
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 1%);
 }
 
 section {
@@ -106,36 +128,9 @@ section {
   }
 }
 
-.references {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  margin-block: 5rem;
-}
-.references img {
-  transition: all 0.5s;
-}
-.references img:hover {
-  filter: unset;
-  transform: scale(1.1);
-}
-
-h3::before {
-  content: "- ";
-}
-h3::after {
-  content: " -";
-}
-
 img {
   filter: grayscale(1);
   max-width: 100%;
-}
-
-.beerd-logo {
-  opacity: 0.6;
-}
-
-.cti {
-  opacity: 0.7;
 }
 
 hr {
@@ -146,6 +141,37 @@ hr {
   hr {
     width: 50%;
   }
+}
+
+.references {
+  box-shadow: 0 2px 6px rgb(116, 125, 144);
+  margin-block: 5rem;
+}
+.references img {
+  transition: all 0.5s;
+}
+.references img:hover {
+  filter: unset;
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+.icon:hover {
+  fill: rgba(0, 0, 0, 0.7);
+  transform: scale(1.5);
+}
+
+.beerd-logo {
+  opacity: 0.6;
+}
+
+.cti {
+  opacity: 0.7;
 }
 
 .m-1a {
