@@ -69,6 +69,14 @@ h1 {
   }
 }
 
+h3 {
+  font-size: 1.5em;
+}
+@media screen and (max-width: 390px) {
+  h3 {
+    font-size: 98%;
+  }
+}
 h3::before {
   content: "- ";
 }
