@@ -123,6 +123,10 @@ a:link {
   color: hsl(0, 0%, 1%);
 }
 
+b {
+  font-size: 1.5em;
+}
+
 section {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.1);
