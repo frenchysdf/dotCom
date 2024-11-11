@@ -46,13 +46,13 @@ $font-copy:              'Montserrat', sans-serif
     content: ""
     position: fixed
     background: $dark-gray-color
-  
+
 
 @mixin box-media-query
    @media screen and (min-width: 800px)
     margin:           3rem 20vw auto 20vw
-    
-//############################################    
+
+//############################################
 //-----=> RULES
 //############################################
 
@@ -62,55 +62,56 @@ $font-copy:              'Montserrat', sans-serif
   background-color:   $selection-color
   color:              $color-white
   text-shadow:        2px 2px 2px $dark-gray-color
-  
+
 *, *::before, *::after
   margin:             0
   padding:            0
   box-sizing:         border-box
 
 html
- 
+
   @include docBorders
-  
+
   &::before, &::after
     left: 0
     right: 0
     height: 10px
-    
+
   &::before
     top: 0
-    
+
   &::after
     bottom: 0
-  
-  
+
+
 body
   text-align:         center
   font-family:        $font-copy
   background:         #ECE9E6
   background:         -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6)
   background:         url('site-background.png'), linear-gradient(to right, #FFFFFF, #ECE9E6)
+  background-attachment: fixed
   background-size:    cover
   background-repeat:  no-repeat
   min-height: 100vh
-  @include docBorders 
-  
+  @include docBorders
+
   &::before, &::after
     top: 0
     bottom: 0
     width: 10px
-  
+
   &::before
     left: 0
-    
+
   &::after
     right: 0
 
-  // @media (prefers-color-scheme: dark) 
+  // @media (prefers-color-scheme: dark)
   //   border-color:     $black-color
-  
+
 //-----=> HTML ELEMENTS
- 
+
 header
   width: 100%
   margin-top: 5rem
@@ -121,12 +122,12 @@ h1
 h2
   @media screen and (max-width: 390px)
     font-size: 98%
-  
+
 h3
   font-size: 1.5em
   @media screen and (max-width: 390px)
     font-size: 98%
-    
+
   &::before
     content: '- '
   &::after
@@ -134,20 +135,20 @@ h3
 
 svg
   fill: $color-black
-  
+
 main
   color: $color-black
   width: 95%
   margin: 1rem auto
 
-p 
+p
   text-align: left
   line-height: 1.75
   text-rendering: optimizeLegibility
   font-size: 1.25rem
-  
+
   @include box-media-query
-  
+
 ul
   padding-top: 2rem
   list-style: none
@@ -155,8 +156,8 @@ ul
   justify-content: center
   align-items: center
   flex-wrap: wrap
-  
-li 
+
+li
   padding: 0 2rem
 
 a:link
@@ -170,29 +171,29 @@ section
   border-radius: 4px
   padding: 2rem
   margin: 3rem auto
-  
+
   @include box-media-query
 
 img
   filter: grayscale(1)
   max-width: 100%
-  
+
 hr
   margin: 3rem auto
   color: $light-gray
-  
+
   @media screen and (min-width: 800px)
     width: 50%
-    
+
 //-----=> CLASSES
 
 .references
   box-shadow: 0 2px 6px $box-shadow
   margin-block: 5rem
-  
+
   img
     transition: all .5s
-    
+
     &:hover
       filter: unset
       transform: scale(1.1)
@@ -202,20 +203,20 @@ hr
   height: 3.5rem
   padding: .25rem
   transition: all .3s ease-in-out
-  
+
   &:hover
     fill:       $icon-hover-color
     transform:  scale(1.5)
 
 .beerd-logo
   opacity: .6
-   
+
 .cti
-  opacity: .7 
+  opacity: .7
 
 //-----=> UTILITIES
 
 .m-1a
   margin: 1rem auto
-  
+
 //-----=> ANIMATION

@@ -33,6 +33,7 @@ body {
   background: #ECE9E6;
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
   background: url("site-background.png"), linear-gradient(to right, #FFFFFF, #ECE9E6);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
